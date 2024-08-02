@@ -6,6 +6,14 @@ pipeline {
         git "https://github.com/AkashSivakumar/express-hello-world"
       }
     }
+    stage("debug"){
+      steps {
+        script {
+          sh 'ls'
+          sh 'pwd'
+        }
+      }
+    }
     stage("install"){
       steps {
         script {
